@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirecting to Microsoft Edge</title>
+    <script>
+        // Function to detect if the browser is Microsoft Edge
+        function checkBrowser() {
+            var userAgent = navigator.userAgent;
+            var isEdge = /Edge\/\d./i.test(userAgent);
+            
+            // If the browser is not Edge, show a pop-up message
+            if (!isEdge) {
+                alert("Please open this app in Microsoft Edge for the best experience.");
+                window.location.href = "https://www.microsoft.com/edge";  // Redirect to Microsoft Edge download page
+            } else {
+                // If it's Edge, redirect to the Power Apps link
+                window.location.href = "https://apps.powerapps.com/play/e/default-c09afb75-1cf8-46ca-9c5e-0a01bfbd86f2/a/da6abc26-4882-4681-89e0-709dba447700?tenantId=c09afb75-1cf8-46ca-9c5e-0a01bfbd86f2&hint=857d0959-b069-46c2-96f9-3fbf3f1d5fc6&sourcetime=1728364852344&source=portal";
+            }
+        }
+
+        // Run the check when the page loads
+        window.onload = checkBrowser;
+    </script>
+</head>
+<body>
+    <h1>Checking your browser...</h1>
+</body>
+</html>
