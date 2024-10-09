@@ -11,12 +11,12 @@
             var isEdge = userAgent.includes("Edg");
 
             if (!isEdge) {
-                // If the browser is not Microsoft Edge, attempt to redirect to Microsoft Edge app
+                // If the browser is not Microsoft Edge, show a popup asking to download Edge
+                alert("This app is optimized for Microsoft Edge. Please download and install Edge for the best experience.");
+            } else {
+                // Automatically redirect to Microsoft Edge if it's being used
                 var edgeAppURL = "microsoft-edge:https://apps.powerapps.com/play/e/default-c09afb75-1cf8-46ca-9c5e-0a01bfbd86f2/a/da6abc26-4882-4681-89e0-709dba447700";
                 window.location.href = edgeAppURL;
-            } else {
-                // If Microsoft Edge is detected, redirect to Power Apps app link
-                window.location.href = "https://apps.powerapps.com/play/e/default-c09afb75-1cf8-46ca-9c5e-0a01bfbd86f2/a/da6abc26-4882-4681-89e0-709dba447700";
             }
         }
 
